@@ -26,10 +26,10 @@
 
     <!-- Shipping Cost -->
     <div class="mt-4">
-      <x-input-label for="shippingCost" :value="__('Shipping Cost')" />
-      <x-text-input id="shippingCost" class="block mt-1 w-full" type="text" name="shippingCost" :value="old('shippingCost')"
+      <x-input-label for="shipping_cost" :value="__('Shipping Cost')" />
+      <x-text-input id="shipping_cost" class="block mt-1 w-full" type="text" name="shipping_cost" :value="old('shippingCost')"
         required />
-      <x-input-error :messages="$errors->get('shippingCost')" class="mt-2" />
+      <x-input-error :messages="$errors->get('shipping_cost')" class="mt-2" />
     </div>
 
     <!-- Description -->
@@ -42,10 +42,9 @@
 
     <!-- image -->
     <div class="mt-4">
-      <x-input-label for="imagen" :value="__('Imagen')" />
-      <x-text-input id="imagen" class="block mt-1 w-full" type="file" name="imagen" :value="old('imagen')"
-        required />
-      <x-input-error :messages="$errors->get('imagen')" class="mt-2" />
+      <x-input-label for="image_path" :value="__('Imagen')" />
+      <x-text-input id="image_path" class="block mt-1 w-full" type="file" name="image_path" :value="old('image_path')" />
+      <x-input-error :messages="$errors->get('image_path')" class="mt-2" />
     </div>
 
 
