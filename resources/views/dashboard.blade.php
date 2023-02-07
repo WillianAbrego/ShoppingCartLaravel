@@ -24,10 +24,11 @@
           <p class="text-gray-700 text-base">{{ $product->description }}</p>
           <p class="text-gray-700 text-base">${{ $product->price }}</p>
           <p class="text-gray-700 text-base">${{ $product->shipping_cost }}</p>
-          <button
-            class="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
-            Editar
-          </button>
+          <a href="{{ route('products.edit', $product->id) }}"> <button
+              class="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-4 border border-green-500 hover:border-transparent rounded">
+              Editar
+            </button></a>
+
           <button
             class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">
             Eliminar

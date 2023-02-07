@@ -69,7 +69,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -81,7 +81,18 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required',
+            'details' => 'required',
+            'price' => 'required',
+            'shipping_cost' => 'required',
+            'description' => 'required',
+            'image_path' => 'required'
+
+        ]);
+        $product->update($data);
+
+        return redirect('dashboard');
     }
 
     /**
