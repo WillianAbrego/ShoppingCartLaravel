@@ -47,7 +47,8 @@ class ProductController extends Controller
 
         Product::create($data);
 
-        return redirect()->route('products.create');
+        //   return redirect()->route('products.create');
+        return redirect('dashboard');
     }
 
     /**
@@ -103,6 +104,7 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect('dashboard');
     }
 }
